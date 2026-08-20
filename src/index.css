@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a1a;
+  color: #ffffff;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Page Container */
+.ebook-page {
+  width: 794px;
+  min-height: 1123px;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-cover {
+  background: linear-gradient(135deg, #050514 0%, #0d0a2e 20%, #1a0a3e 40%, #0d1f5e 60%, #0a2a7a 80%, #061830 100%);
+}
+
+.bg-gradient-page {
+  background: linear-gradient(160deg, #06071a 0%, #0c0d2e 40%, #0a1040 100%);
+}
+
+.bg-gradient-chapter {
+  background: linear-gradient(145deg, #070720 0%, #0e0b30 30%, #150d3a 60%, #0a1535 100%);
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+}
+
+.glow-purple {
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(147, 51, 234, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* Glass morphism cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.glass-card-blue {
+  background: rgba(59, 130, 246, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+}
+
+.glass-card-purple {
+  background: rgba(147, 51, 234, 0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(147, 51, 234, 0.25);
+  border-radius: 16px;
+}
+
+.glass-card-cyan {
+  background: rgba(6, 182, 212, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 12px;
+}
+
+/* Text gradients */
+.text-gradient-blue {
+  background: linear-gradient(90deg, #60a5fa, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b, #fcd34d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(90deg, #06b6d4, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cover {
+  background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 30%, #818cf8 60%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Accent lines */
+.accent-line {
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  border-radius: 2px;
+}
+
+.accent-line-sm {
+  height: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+  border-radius: 2px;
+}
+
+/* Chapter badge */
+.chapter-badge {
+  background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c4b5fd;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  border-left: 4px solid #7c3aed;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+}
+
+.highlight-box-cyan {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(59, 130, 246, 0.08));
+  border-left: 4px solid #06b6d4;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+}
+
+.highlight-box-warning {
+  background: rgba(251, 191, 36, 0.07);
+  border-left: 4px solid #f59e0b;
+  border-radius: 0 12px 12px 0;
+  padding: 14px 18px;
+}
+
+/* Step indicator */
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
+}
+
+/* Checklist item */
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.check-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 10px;
+}
+
+/* Formula box */
+.formula-box {
+  background: rgba(30, 27, 75, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+/* Metric card */
+.metric-card {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.15), rgba(124, 58, 237, 0.15));
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Page number */
+.page-number {
+  position: absolute;
+  bottom: 28px;
+  right: 40px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 22px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+}
+
+/* Decorative circles */
+.deco-circle {
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Table styles */
+.ebook-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ebook-table th {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.3), rgba(124, 58, 237, 0.3));
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #c4b5fd;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.ebook-table td {
+  padding: 9px 14px;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  vertical-align: top;
+}
+
+.ebook-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Flow arrow */
+.flow-arrow {
+  color: #6366f1;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: #0a0a1a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    size: 794px 1123px;
+    margin: 0;
+  }
+  
+  .ebook-wrapper {
+    padding: 0 !important;
+    gap: 0 !important;
+    background: #030308 !important;
+  }
+  
+  .ebook-page {
+    page-break-after: always;
+    break-after: page;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media screen {
+  .ebook-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 12px;
+    background: #030308;
+    min-height: 100vh;
+  }
+  
+  .ebook-page {
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7), 0 0 40px rgba(59, 130, 246, 0.08);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d2d5e;
+  border-radius: 3px;
+}
+
+/* Abstract shapes SVG */
+.abstract-shape {
+  position: absolute;
+  pointer-events: none;
+}
